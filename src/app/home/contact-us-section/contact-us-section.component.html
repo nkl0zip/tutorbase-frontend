@@ -1,0 +1,45 @@
+<div id="contact-us" class="contact-section">
+  <div class="contact-content">
+    <div class="contact-heading">Get in Touch Today!</div>
+    <div class="contact-sub">
+      Have a question, need support, or just want to say hello? We’re here to
+      help! Fill out the form below, send us an email, or give us a call — our
+      team will get back to you as soon as possible.<br />
+      We look forward to hearing from you!
+    </div>
+
+    <form class="contact-form" (submit)="onSubmit($event)">
+      <input
+        class="contact-input"
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+        autocomplete="off"
+      />
+      <input
+        class="contact-input"
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+        autocomplete="off"
+      />
+      <textarea
+        class="contact-textarea"
+        name="message"
+        placeholder="Write your message here..."
+        required
+        rows="4"
+      ></textarea>
+      <button class="contact-btn" type="submit">Send</button>
+    </form>
+  </div>
+
+  <div
+    class="contact-img"
+    role="img"
+    aria-label="Contact illustration"
+    style="background-image: url('assets/images/contact.png')"
+  ></div>
+</div>

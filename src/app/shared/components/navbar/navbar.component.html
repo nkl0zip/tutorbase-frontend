@@ -1,0 +1,51 @@
+<nav class="navbar-container">
+  <div class="navbar-inner">
+    <button
+      class="navbar-toggle"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen"
+      aria-label="Toggle navigation"
+    >
+      <span [class.open]="menuOpen" class="navbar-toggle-icon"></span>
+    </button>
+    <div class="navbar-flex">
+      <ul class="navbar-links navbar-links-left">
+        <li>
+          <a routerLink="/" routerLinkActive="active" (click)="closeMenu()"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/courses"
+            routerLinkActive="active"
+            (click)="closeMenu()"
+            >Courses</a
+          >
+        </li>
+      </ul>
+      <div class="navbar-logo">
+        <img src="assets/images/homeNavlogo.png" alt="TutorBase Logo" />
+      </div>
+      <ul class="navbar-links navbar-links-right">
+        <li>
+          <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()"
+            >About Us</a
+          >
+        </li>
+        <li>
+          <a href="#" (click)="scrollToContact($event)">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- MOBILE DROPDOWN MENU -->
+  <div class="navbar-mobile-menu" [class.active]="menuOpen">
+    <ul>
+      <li><a routerLink="/" (click)="closeMenu()">Home</a></li>
+      <li><a routerLink="/courses" (click)="closeMenu()">Courses</a></li>
+      <li><a routerLink="/about" (click)="closeMenu()">About Us</a></li>
+      <li><a href="#" (click)="scrollToContact($event)">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>

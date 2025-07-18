@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+body,
+html {
+  background: #0a0a0a !important;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; // Lock horizontal scroll
+}
+
+.viewport-fill {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden; // Prevents accidental scrollbars
+}

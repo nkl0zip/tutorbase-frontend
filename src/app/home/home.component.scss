@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap");
+
+// Set the height minus navbar (e.g. 88px)
+// If your navbar is 68px, change 88px to 68px
+.frontpage-main {
+  width: 100vw;
+  max-width: 100vw;
+  height: calc(100dvh); // Adjust if your navbar is a different height!
+  min-height: 0;
+  margin: 0 auto;
+  background: #fff;
+  border-bottom-left-radius: 80px 80px; // Large horizontal ovals
+  border-bottom-right-radius: 80px 80px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+  // Slight box-shadow for elevation (optional)
+  box-shadow: 0 0px 64px 0 rgba(10, 10, 10, 0.09);
+}
+
+.frontpage-title-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-top: 40px;
+}
+
+.frontpage-title {
+  font-family: "Lora", serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  line-height: 1.13;
+  max-width: 820px;
+}
+
+.frontpage-content-row {
+  width: 100%;
+  max-width: 1750px;
+  flex: 1 0 0;
+  height: 1px; // forces child to fill the rest
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.frontpage-desc-col {
+  flex: 1.2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.frontpage-desc {
+  font-family: "Lora", serif;
+  font-size: 1.15rem;
+  color: #3a3a3a;
+  line-height: 1.65;
+  max-width: 400px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.frontpage-img-col {
+  flex: 1.3;
+  display: flex;
+  align-items: flex-end; /* key: stick image to the bottom */
+  justify-content: center;
+  min-width: 0;
+  height: 100%;
+  /* Optional: for image shadow to not get clipped by border-radius */
+  position: relative;
+  z-index: 2;
+}
+
+.frontpage-img-col img {
+  width: 540px;
+  max-width: 90vw;
+  height: 500px;
+  border-radius: 38px;
+  object-fit: contain;
+  /* key: push to the bottom of the col */
+  align-self: flex-end;
+}
+
+.frontpage-stats-col {
+  flex: 1.1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.frontpage-stats {
+  font-family: "Lora", serif;
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: #3a3a3a;
+  background: #fff8d2;
+  padding: 18px 30px 14px 30px;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+  min-width: 120px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .frontpage-main {
+    border-bottom-left-radius: 80px 60px;
+    border-bottom-right-radius: 80px 60px;
+  }
+  .frontpage-content-row {
+    gap: 16px;
+    padding: 0 10px;
+  }
+  .frontpage-title-row {
+    margin-bottom: 12px;
+    padding-top: 20px;
+  }
+  .frontpage-img-col img {
+    width: 320px;
+    border-radius: 20px;
+  }
+  .frontpage-stats {
+    font-size: 1.13rem;
+    padding: 11px 18px 9px 18px;
+    min-width: 80px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .frontpage-main {
+    border-bottom-left-radius: 36vw 24vw;
+    border-bottom-right-radius: 36vw 24vw;
+    height: calc(100dvh - 60px); // change 60px to your navbar's mobile height!
+    min-height: 0;
+    padding-top: 0;
+  }
+  .frontpage-title {
+    font-size: 1.15rem;
+    max-width: 96vw;
+  }
+  .frontpage-title-row {
+    margin-bottom: 8px;
+    padding-top: 18px;
+  }
+  .frontpage-content-row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 0 2vw;
+    flex: 1 1 0;
+    height: 1px;
+  }
+  .frontpage-desc-col,
+  .frontpage-stats-col {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .frontpage-desc {
+    font-size: 0.99rem;
+    text-align: center;
+    max-width: 98vw;
+  }
+  .frontpage-img-col {
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 210px; /* Controls how much vertical space image gets */
+    min-height: 120px;
+    margin-bottom: 8px;
+  }
+  .frontpage-img-col img {
+    width: 85vw;
+    min-width: 0;
+    max-width: 95vw;
+    border-radius: 14px;
+    align-self: flex-end;
+  }
+  .frontpage-stats {
+    font-size: 0.95rem;
+    padding: 7px 14px 7px 14px;
+    min-width: 0;
+  }
+}
