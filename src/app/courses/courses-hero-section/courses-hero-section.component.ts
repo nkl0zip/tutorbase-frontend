@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-courses-hero-section',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class CoursesHeroSectionComponent {
   searchText: string = '';
+  @Output() searchChanged = new EventEmitter<string>();
+
+  onSearchChange() {
+    this.searchChanged.emit(this.searchText.trim());
+  }
 }

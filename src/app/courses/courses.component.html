@@ -1,7 +1,10 @@
 <div class="app-root-layout">
   <app-global-navbar></app-global-navbar>
   <div class="main-scroll-content">
-    <app-courses-hero-section></app-courses-hero-section>
+    <app-courses-hero-section
+      (searchChanged)="searchText = $event"
+    ></app-courses-hero-section>
+    <app-courses-list [searchText]="searchText"></app-courses-list>
     <router-outlet></router-outlet>
   </div>
 </div>

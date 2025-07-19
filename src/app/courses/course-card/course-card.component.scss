@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
+.course-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 14px 42px 0 rgba(8, 15, 52, 0.06);
+  display: flex;
+  flex-direction: column;
+  padding: 14px 14px 14px 14px;
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+  min-width: 220px;
+  min-height: 247px;
+  box-sizing: border-box;
+  transition: box-shadow 0.17s, transform 0.15s;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 24px 52px 0 rgba(112, 44, 255, 0.13);
+    transform: translateY(-4px) scale(1.018);
+  }
+}
+
+.course-card-img {
+  width: 100%;
+  height: 113px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+.course-card-tag {
+  display: inline-block;
+  width: fit-content;
+  padding: 4px 18px;
+  background: rgba(112, 44, 255, 0.13);
+  color: #702cff;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+.course-card-title {
+  color: #202020;
+  font-family: "Inter", sans-serif;
+  font-size: 1.01rem;
+  font-weight: 500;
+  line-height: 1.19;
+  margin-bottom: 7px;
+  min-height: 32px;
+}
+
+.course-card-bottom {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: auto;
+}
+
+.course-card-price {
+  color: #202020;
+  font-size: 1.01rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  text-transform: capitalize;
+}
+
+.course-card-on {
+  color: #202020;
+  font-size: 0.77rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+
+  .course-card-platform {
+    color: #0000ff;
+    font-weight: 600;
+    margin-left: 2px;
+    text-transform: capitalize;
+  }
+}
+
+/* Responsive for all screens */
+@media (max-width: 1200px) {
+  .course-card {
+    max-width: 43vw;
+    min-width: 130px;
+    min-height: 210px;
+    padding: 11px 8px;
+  }
+}
+
+@media (max-width: 700px) {
+  .course-card {
+    max-width: 96vw;
+    min-width: 0;
+    min-height: 155px;
+    padding: 8px 5px;
+  }
+  .course-card-img {
+    height: 21vw;
+    min-height: 60px;
+    max-height: 95px;
+  }
+  .course-card-title {
+    font-size: 0.94rem;
+  }
+}

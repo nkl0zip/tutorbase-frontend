@@ -8,7 +8,8 @@ $tb-hover: #f6f4fd;
 $tb-radius: 20px;
 
 .global-navbar {
-  position: fixed;
+  position: fixed; // <--- ONLY THIS
+  // position: sticky;  // <--- REMOVE or COMMENT OUT THIS
   top: 0;
   left: 0;
   width: 200px;
@@ -20,7 +21,6 @@ $tb-radius: 20px;
   flex-direction: column;
   justify-content: space-between;
   z-index: 60;
-  position: sticky;
   padding: 36px 28px 28px 28px;
   font-family: "Inter", sans-serif;
   box-sizing: border-box;
@@ -41,7 +41,7 @@ $tb-radius: 20px;
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 700px) {
     width: 0;
     min-width: 0;
     padding: 0;

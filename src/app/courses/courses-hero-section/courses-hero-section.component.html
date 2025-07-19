@@ -1,5 +1,9 @@
 <div class="courses-hero-container">
-  <form class="searchbar-wrapper" autocomplete="off">
+  <form
+    class="searchbar-wrapper"
+    autocomplete="off"
+    (submit)="$event.preventDefault()"
+  >
     <span class="search-icon" aria-hidden="true"></span>
     <input
       type="text"
@@ -7,6 +11,7 @@
       placeholder="Search your course here..."
       [(ngModel)]="searchText"
       name="courseSearch"
+      (ngModelChange)="onSearchChange()"
     />
   </form>
 </div>
@@ -28,4 +33,8 @@
     </button>
   </div>
   <img class="hero-bg-bottom" src="assets/images/star1.svg" alt="" />
+</div>
+
+<div class="explore-courses-title-container">
+  <span class="explore-courses-title-text">Explore Courses</span>
 </div>

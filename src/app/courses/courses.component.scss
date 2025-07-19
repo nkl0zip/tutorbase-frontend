@@ -4,6 +4,10 @@
   min-height: 100vh;
   width: 100vw;
   background: #0a0a0a;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
 }
 
 /* Sticky/fixed sidebar */
@@ -18,10 +22,15 @@ app-global-navbar {
   z-index: 100;
   box-shadow: 2px 0 16px 0 rgba(10, 10, 10, 0.05);
 
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     width: 102px;
     min-width: 72px;
     padding: 20px 6px 18px 6px;
+  }
+  @media (max-width: 700px) {
+    width: 0px;
+    height: 0;
+    display: none;
   }
 }
 

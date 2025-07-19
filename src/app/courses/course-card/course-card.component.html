@@ -1,0 +1,14 @@
+<div class="course-card">
+  <div
+    class="course-card-img"
+    [ngStyle]="{ 'background-image': 'url(' + image + ')' }"
+  ></div>
+  <div class="course-card-tag">{{ tag }}</div>
+  <div class="course-card-title">{{ name }}</div>
+  <div class="course-card-bottom">
+    <span class="course-card-price">{{ price }}</span>
+    <span class="course-card-on">
+      On <span class="course-card-platform">{{ platform }}</span>
+    </span>
+  </div>
+</div>

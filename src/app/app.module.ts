@@ -15,6 +15,8 @@ import { GlobalNavbarComponent } from './shared/components/global-navbar/global-
 import { CoursesHeroSectionComponent } from './courses/courses-hero-section/courses-hero-section.component';
 
 import { FormsModule } from '@angular/forms';
+import { CourseCardComponent } from './courses/course-card/course-card.component';
+import { CoursesListComponent } from './courses/courses-list/courses-list.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { FormsModule } from '@angular/forms';
     NotFoundComponent,
     GlobalNavbarComponent,
     CoursesHeroSectionComponent,
+    CourseCardComponent,
+    CoursesListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

@@ -1,0 +1,13 @@
+<div class="courses-list-container">
+  <div class="courses-grid" *ngFor="let row of rows; let last = last">
+    <ng-container *ngFor="let course of row">
+      <app-course-card
+        [image]="course.image"
+        [tag]="course.tag"
+        [name]="course.name"
+        [price]="course.price"
+        [platform]="course.platform"
+      ></app-course-card>
+    </ng-container>
+  </div>
+</div>
